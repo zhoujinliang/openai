@@ -86,6 +86,10 @@ final class OpenAI extends OpenAIClientBase {
   /// You can change it by calling the [OpenAI.baseUrl] setter.
   static String get baseUrl => OpenAIConfig.baseUrl;
 
+  /// The version of the API, by default it is set to the OpenAI API version.
+  /// You can change it by calling the [OpenAI.version] setter.
+  static String get version => OpenAIConfig.version;
+
   /// {@macro openai_config_requests_timeOut}
   static set requestsTimeOut(Duration requestsTimeOut) {
     OpenAIConfig.requestsTimeOut = requestsTimeOut;
@@ -114,6 +118,11 @@ final class OpenAI extends OpenAIClientBase {
   /// This is used to set the base url of the OpenAI API, by default it is set to [OpenAIConfig.baseUrl].
   static set baseUrl(String baseUrl) {
     OpenAIConfig.baseUrl = baseUrl;
+  }
+
+  /// This is used to set the version of the OpenAI API, by default it is set to [OpenAIConfig.version].
+  static set version(String version) {
+    OpenAIConfig.version = version;
   }
 
   /// If you have multiple organizations, you can set it's id with this.
